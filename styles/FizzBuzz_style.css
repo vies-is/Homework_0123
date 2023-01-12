@@ -20,7 +20,7 @@ font-family: sans-serif;
   font-size: 25px;
   position: absolute;
   right:20px;
-  top:20px;
+  top:75px;
 }
 
 .new-element {
@@ -52,7 +52,6 @@ button {
   background-color: rgb(255, 191, 0);
   border: none;
   color: rgb(178, 17, 17);
-  size: 100px;
   font: bold;
   border: 2px solid rgb(178, 17, 17);
   padding: 15px 32px;
@@ -83,17 +82,85 @@ button {
 
 .p {
   font-family: "helvetica neue", helvetica, sans-serif;
+  font-size: 14px;
+  margin: 5px;
   }
 
 .footer {
   font-family: "helvetica neue", helvetica, sans-serif;
   letter-spacing: 1px;
   text-transform: uppercase;
-  text-align: center;
   color: rgba(0, 0, 200, 0.6);
   margin: 0;
   padding: 0;
   }
+
+.numeric-input{
+  width: 4cm;
+  margin-left: 0.5cm;
+  margin-right: 0.5cm;
+}
+
+.numeric-input::placeholder {
+  font-family: "helvetica neue", helvetica, sans-serif;
+  font-size: 12px;
+  font-style: italic;
+  }
+
+label {
+  margin-left: 5px;
+}
+
+.inputBox{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: left;
+  align-items: left;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.instructionBox {
+  position: relative;
+  padding: 10px;
+  display: grid;
+  width: 60%;
+  font-size: 15px;
+  text-size-adjust: 100%;
+  border: 1px solid black;
+  line-height: 1.5em;
+  background-color: rgb(255, 191, 0);
+  margin: 5px;
+  margin-bottom: 1em;
+  margin-top: 0.5em;
+}
+
+.column {
+  float: left;
+}
+
+.left {
+  width: 50%;
+  padding: 10px;
+}
+.right {
+  width: 50%;
+  padding: 10px;
+}
+
+.h1 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 5px;
+  margin-top: 15px;
+}
+
+.h2 {
+  font-size: 14px;
+  font-weight: bold;
+  margin: 5px;
+}
 
 @media (max-width: 401px) {
   .generator-image{
@@ -104,6 +171,10 @@ button {
     flex-direction: column;
     display: flex;
   }
+  .h1{
+    margin-top: 15px;
+    margin:5px;
+  }
 
  .innerText {
     font-size: 25px;
@@ -113,9 +184,11 @@ button {
   }
   title {
     font-size: 15px;
+    margin:5px;
   }
   p {
     font-size: 15px;
+    margin:5px;
   }
 
   footer {
@@ -137,7 +210,10 @@ button {
     background-color: rgb(160, 160, 160);
     font-family: sans-serif;
   }
-
+  .h1{
+    margin-top: 15px;
+    margin:5px;;
+  }
  .innerText {
     font-size: 25px;
     justify-content: center;
@@ -146,9 +222,11 @@ button {
   }
   title {
     font-size: 15px;
+    margin:5px;
   }
   p {
     font-size: 15px;
+    margin:5px;
   }
 
   footer {
@@ -170,7 +248,10 @@ button {
     background-color: rgb(200, 200, 200);
     font-family: sans-serif;
   }
-
+  .h1{
+    margin-top: 15px;
+    margin:5px;
+  }
   .innerText {
     font-size: 25px;
     justify-content: center;
@@ -179,12 +260,18 @@ button {
   }     
   title {
     font-size: 30px;
+    margin: 5px;
   }
   p {
-    font-size: 20px;
+    font-size: 15px;
+    margin: 5px
   }
   footer {
     font-size: 12px;
+  }
+  .instructionBox {
+    font-size: 12px;
+    margin: 5px;
   }
 }
 
@@ -197,7 +284,13 @@ button {
     background-color: rgb(180, 180, 180);
     font-family: sans-serif;
   }
-  innerText {
+
+  .h1{
+    margin-top: 15px;
+    margin:5px;
+  }
+
+  .innerText {
     font-size: 25px;
     justify-content: center;
     align-items: center;
@@ -205,11 +298,21 @@ button {
   }
   title {
     font-size: 30px;
+    margin: 5px;
   }
   p {
-    font-size: 20px;
+    font-size: 15px;
+    margin: 5px;
   }
   footer {
     font-size: 15px;
   }
+  .instructionBox {
+    font-size: 12px;
+    margin: 5px;
+  }
+  .generator-image{
+   margin: -8px;
+  }
 }
+

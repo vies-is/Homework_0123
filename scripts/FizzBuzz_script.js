@@ -24,10 +24,76 @@ function addElement() {
     parentElement.appendChild(newElement);
 }
 
-     
-//  const numElements = document.getElementById("value").value;
-//     parse = parseInt(numElements);
- 
+const numElement1 = document.getElementById("value1").value;
+const numElement2 = document.getElementById("value2").value;
+const fizzValue = document.getElementById("value3").value;
+const buzzValue = document.getElementById("value4").value;
+
+function manyInputElements() {
+    const numElement1 = document.getElementById("value1").value;
+    const numElement2 = document.getElementById("value2").value;
+    parse1 = parseInt(numElement1);
+    parse2 = parseInt(numElement2);
+    const numInputElements = parse2-parse1+1;
+    if ((parse1 <= 0) || (parse2 >= 100)) {
+        alert("Please enter a number from 1 to 100");
+    } else if (parse1 > parse2) {
+        alert("Starting number should be smaller than ending number");
+    }   
+    manyFizzBuzzes()
+}
+
+function manyFizzBuzzes() {
+    const numElement1 = document.getElementById("value1").value;
+    const numElement2 = document.getElementById("value2").value;
+    parse1 = parseInt(numElement1);
+    parse2 = parseInt(numElement2);
+    const numInputElements = parse2-parse1+1;
+    for (i = 0; i< numInputElements; i++) {
+        const parentElement = document.getElementById("container");
+        const newElement = document.createElement("div");
+        const fizzValue = document.getElementById("value3").value;
+        const buzzValue = document.getElementById("value4").value;
+        newElement.classList.add("new-element");
+        parentElement.appendChild(newElement);
+        newElement.innerText = parse1 + i;
+        buzz = 5; fizz = 3;
+        if (parseInt(buzzValue) != buzz) {
+            buzz == parseInt(buzzValue);
+        }
+        if (parseInt(fizzValue) != fizz) {
+            fizz == parseInt(fizzValue);
+        }
+        if ((parse1 + i) % 3 === 0 && (parse1 + i) % 5 === 0){
+            newElement.classList.add("fizzbuzz");
+            newElement.innerText = "FizzBuzz";
+        } else if ((parse1 + i) % fizz === 0) {
+            newElement.classList.add("fizz");
+            newElement.innerText = "Fizz";
+        } else if ((parse1 + i) % buzz === 0) {
+            newElement.classList.add("buzz");
+            newElement.innerText = "Buzz";
+        } 
+        if ((parse1 + i) % 2 === 0) {
+            newElement.classList.add("even");
+        } else {
+            newElement.classList.add("odd");
+        }
+    if ((parse1 <= 0) || (parse2 >= 100)) {
+        alert("Please enter a number from 1 to 100");
+        removeElement();
+    } else if (parse1 >= parse2) {
+        alert("Starting number should be smaller than ending number");
+        removeElement();
+    }   
+    }
+}
+
+function addElementInputs() {
+    manyInputElements();
+
+}
+
 
 function addElements() {
     for (i = 0; i<100; i++) {
@@ -72,8 +138,23 @@ function removeEvenElements() {
     for (const evenElement of evenElements) {
         parentElement.removeChild(evenElement);
     }
-}
+    }
+//TODO
+// function leaveFizzes() {
+//     const parentElement = document.getElementById("container");
+//     const fizzElements = parentElement.querySelectorAll(".fizz")
+//         if (fizzElements == parentElement.querySelectorAll(fizz)){ {
+//             return;    
+// //         } else  {
+//             parentElement.removeChild(fizzElements);
+//     }
+// }
+// }
 
+function leaveBuzzes() {
+
+}
+//
 function addListeners() {
     const addButton = document.getElementById("addButton");
     addButton.addEventListener("click", addElement);
@@ -87,118 +168,14 @@ function addListeners() {
     removeEvensButton.addEventListener("click", removeEvenElements);
     const removeOddsButton = document.getElementById("removeOddsButton");
     removeOddsButton.addEventListener("click", removeOddElements);
+    const addControlledElementsButton = document.getElementById("addControlledElementsButton");
+    addControlledElementsButton.addEventListener("click", addElementInputs);
+    // const showFizzButton = document.getElementById("showFizzButton");
+    // showFizzButton.addEventListener("click", "leaveFizzes");
 }
 
 function main() {
     addListeners();
-//   const btn = document.querySelector('button');
-//     btn.addEventListener('click', () => {
-//     const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
-//     document.body.style.backgroundColor = rndCol;
-//     });
-//   const resetButton = document.querySelector('.reset-button');
-//     resetButton.addEventListener('click', resetGen);  
-//   //para.addEventListener('click', updateName);
-//   //displayFizzBuzz();
-//   //addElement();
 };
 
 document.addEventListener('DOMContentLoaded', main);
-
-
-// function random (number) {
-//   return Math.floor(Math.random() * (number+1));
-// };
-
-// function resetGen() {
-//   document.body.style.backgroundColor = 'white';
-// };
-
-
-// function addElement() {
-//   const parentElement = document.getElementById("container");
-//   const newElement = document.createElement("div");
-//   newElement.classlist.add("new-element");
-//   newElement.innerText = "Hello World";
-//   parentElement.appendChild(newElement);
-// }
-
-// const addButton = document.getElementById("addButton");
-// addButton.addEventListener("click", addElement);
-
-// function displayFizzBuzz() {
-//   const numberFizz = document.querySelector('.numberFizz');
-//   const numberBuzz = document.querySelector('.numberBuzz');
-//   const numberInputs = document.querySelector('.numeric-input');
-//   const input = parseInt(numberFizz.value, numberBuzz.value);
-//   const myContainer = document.querySelector('.container-div');
-//   myContainer.textContent = `${input}`;
-// };
- 
-// const numberNodeList = document.querySelectorAll('.numeric-input');
-
-// const numberArray = Array.from(numberNodeList);
-
-// for (const numberInput of numberArray) {
-//   numberInput.addEventListener('change', displayFizzBuzz);
-// };
-
-
-// function handleNumberInput() {
-//   const input = document.querySelector('.numberFizz');
-//   
-// }
-
-//const para = document.querySelector('p');
-
-
-// //function updateName() {
-//   const name = prompt('Enter a new name');
-//   para.textContent = `Player 1: ${name}`;
-// }
-
-
-
-
-// console.log(10 % 3); // 1
-// console.log(10 % 2); // 0
-
-
-// input = parseInt(input) //
-// console.log (`${input}`) //
-// while (isNaN(input)) || input > 1 || input <101 { //
-//   input = prompt("Wrong input. Please enter a number between 1 and 100"); //
-//  input = parseInt(input);
-// console.log (`${input}`); //
-// } 
-// let. container = document.qyerySelector(".container"); 
-// container.textContent = input;
-
-// let i = 0;
-// const whileLoopElement = document.getElementById("while-loop");
-// while (i < 10) {
-//   console.log(i);
-//   whileLoopElement.textContent += i;
-//   i++;
-// }
-
-// let i = 0;
-// const forLoopElement = document.getElementById("for-loop");
-// while (i < 10) {
-//   console.log(i);
-//   forLoopElement.textContent += i;
-//   i++;
-// }
-
-// const myArray  = [];
-// for (let element of myArray) {
-//   console.log(element);
-// }
-
-// function sayHello() {
-//   for (let i = 0; i < 10; i++) {
-//     console.log("Hello World");
-//   }
-// }
-
-// sayHello();
