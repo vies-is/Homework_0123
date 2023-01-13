@@ -1,6 +1,7 @@
 body {
 background-color: rgb(202, 196, 196);
 font-family: sans-serif;
+margin-left: 2cm;
 } 
 
 .main {
@@ -63,6 +64,7 @@ button {
   cursor: pointer;
   transition: transform ease 0.5s, box-shadow ease 0.5s;
   width: 6.5cm;
+  margin-left: 3cm;
 }
 
 .button:hover {
@@ -83,7 +85,7 @@ button {
 .p {
   font-family: "helvetica neue", helvetica, sans-serif;
   font-size: 14px;
-  margin: 5px;
+  margin: 0;
   }
 
 .footer {
@@ -95,20 +97,32 @@ button {
   padding: 0;
   }
 
+.label {
+  font-family: "helvetica neue", helvetica, sans-serif;
+  font-size: 16px;
+  margin-bottom: 5px;
+  }
+
 .numeric-input{
-  width: 4cm;
+  width: 5cm;
   margin-left: 0.5cm;
   margin-right: 0.5cm;
+  line-height: 2;
+  font-size: 16px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .numeric-input::placeholder {
   font-family: "helvetica neue", helvetica, sans-serif;
-  font-size: 12px;
+  font-size: 14px;
   font-style: italic;
   }
 
 label {
-  margin-left: 5px;
+  display: flex;
+  margin-left: 20px;
+  ;
 }
 
 .inputBox{
@@ -116,9 +130,10 @@ label {
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: left;
-  align-items: left;
   margin-top: 10px;
   margin-bottom: 10px;
+  margin-left: 3cm;
+
 }
 
 .instructionBox {
@@ -127,13 +142,12 @@ label {
   display: grid;
   width: 60%;
   font-size: 15px;
-  text-size-adjust: 100%;
   border: 1px solid black;
   line-height: 1.5em;
   background-color: rgb(255, 191, 0);
   margin: 5px;
-  margin-bottom: 1em;
-  margin-top: 0.5em;
+  margin-bottom: 5px;
+  margin-top: 5px;
 }
 
 .column {
@@ -182,18 +196,44 @@ label {
     align-items: center;
     padding: 20px 20px 20px 20px;
   }
-  title {
+  .title {
     font-size: 15px;
     margin:5px;
   }
-  p {
+  .p {
     font-size: 15px;
     margin:5px;
   }
 
-  footer {
+  .footer {
     font-size: 10px;
   }
+
+  .label {
+    font-size: 14px;
+    margin:5px;
+  }
+
+  .inputBox {
+    margin-left: 1.5cm;
+  }
+
+  button {
+    width: 5.5cm;
+    margin-left: 1cm;
+    font-size: 15px;
+  }
+  .numeric-input {
+    width: 4cm;
+    margin-left: 0.5cm;
+    margin-right: 0.5cm;
+    line-height: 2;
+    font-size: 14px;
+  }
+
+  .footer {
+    font-size: 10px;
+  }  
 }
 
 @media (min-width: 401px) and (max-width: 601px){
@@ -220,17 +260,42 @@ label {
     align-items: center;
     padding: 20px 20px 20px 20px;
   }
-  title {
+  .title {
     font-size: 15px;
     margin:5px;
   }
-  p {
+ .p {
     font-size: 15px;
     margin:5px;
   }
 
-  footer {
+  .footer {
     font-size: 12px;
+  }
+
+  .label {
+    font-size: 14px;
+    margin:5px;
+  }
+
+  .inputBox {
+    margin-left: 1.5cm;
+  }
+
+  button {
+    width: 6cm;
+    margin-left: 1cm;
+    font-size: 15px;
+  }
+  .numeric-input {
+    width: 4cm;
+    margin-left: 0.5cm;
+    margin-right: 0.5cm;
+    line-height: 2;
+    font-size: 14px;
+  }
+  .instructionBox {
+    margin-left: 0.5cm;
   }
 }
 
@@ -239,12 +304,12 @@ label {
     width: 150px;
     height: 150px;
   }
-  main {
+  .main {
     flex-direction: column;
     display: flex;
   }
 
-  body{
+  .body{
     background-color: rgb(200, 200, 200);
     font-family: sans-serif;
   }
@@ -262,25 +327,25 @@ label {
     font-size: 30px;
     margin: 5px;
   }
-  p {
+  .p {
     font-size: 15px;
     margin: 5px
   }
-  footer {
+  .footer {
     font-size: 12px;
   }
   .instructionBox {
-    font-size: 12px;
+    font-size: 16px;
     margin: 5px;
   }
 }
 
 @media (min-width: 801px) {
-  main {
+  .main {
     flex-direction: column;
     display: flex;
   }
-  body{
+  .body{
     background-color: rgb(180, 180, 180);
     font-family: sans-serif;
   }
@@ -296,19 +361,19 @@ label {
     align-items: center;
     padding: 20px 20px 20px 20px;
   }
-  title {
+  .title {
     font-size: 30px;
     margin: 5px;
   }
-  p {
+  .p {
     font-size: 15px;
     margin: 5px;
   }
-  footer {
+  .footer {
     font-size: 15px;
   }
   .instructionBox {
-    font-size: 12px;
+    font-size: 16px;
     margin: 5px;
   }
   .generator-image{

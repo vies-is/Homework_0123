@@ -85,7 +85,10 @@ function manyFizzBuzzes() {
     } else if (parse1 >= parse2) {
         alert("Starting number should be smaller than ending number");
         removeElement();
-    }   
+    } else if (numInputElements = string(numInputElements)) {
+        alert("That is not a number!");
+        removeElement();
+    }
     }
 }
 
@@ -93,7 +96,6 @@ function addElementInputs() {
     manyInputElements();
 
 }
-
 
 function addElements() {
     for (i = 0; i<100; i++) {
@@ -138,23 +140,8 @@ function removeEvenElements() {
     for (const evenElement of evenElements) {
         parentElement.removeChild(evenElement);
     }
-    }
-//TODO
-// function leaveFizzes() {
-//     const parentElement = document.getElementById("container");
-//     const fizzElements = parentElement.querySelectorAll(".fizz")
-//         if (fizzElements == parentElement.querySelectorAll(fizz)){ {
-//             return;    
-// //         } else  {
-//             parentElement.removeChild(fizzElements);
-//     }
-// }
-// }
-
-function leaveBuzzes() {
-
 }
-//
+
 function addListeners() {
     const addButton = document.getElementById("addButton");
     addButton.addEventListener("click", addElement);
@@ -170,12 +157,10 @@ function addListeners() {
     removeOddsButton.addEventListener("click", removeOddElements);
     const addControlledElementsButton = document.getElementById("addControlledElementsButton");
     addControlledElementsButton.addEventListener("click", addElementInputs);
-    // const showFizzButton = document.getElementById("showFizzButton");
-    // showFizzButton.addEventListener("click", "leaveFizzes");
 }
 
 function main() {
     addListeners();
-};
+}
 
 document.addEventListener('DOMContentLoaded', main);
