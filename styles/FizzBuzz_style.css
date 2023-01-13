@@ -122,7 +122,6 @@ button {
 label {
   display: flex;
   margin-left: 20px;
-  ;
 }
 
 .inputBox{
@@ -133,7 +132,6 @@ label {
   margin-top: 10px;
   margin-bottom: 10px;
   margin-left: 3cm;
-
 }
 
 .instructionBox {
@@ -168,12 +166,15 @@ label {
   font-weight: bold;
   margin: 5px;
   margin-top: 15px;
+  margin-bottom: 5px;
 }
 
 .h2 {
   font-size: 14px;
   font-weight: bold;
   margin: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 @media (max-width: 401px) {
@@ -353,6 +354,7 @@ label {
   .h1{
     margin-top: 15px;
     margin:5px;
+    margin-bottom: 5px;
   }
 
   .innerText {
@@ -364,6 +366,7 @@ label {
   .title {
     font-size: 30px;
     margin: 5px;
+    margin-bottom: 5px;
   }
   .p {
     font-size: 15px;
@@ -375,6 +378,7 @@ label {
   .instructionBox {
     font-size: 16px;
     margin: 5px;
+    margin-top: 5px;
   }
   .generator-image{
    margin: -8px;

@@ -85,9 +85,6 @@ function manyFizzBuzzes() {
     } else if (parse1 >= parse2) {
         alert("Starting number should be smaller than ending number");
         removeElement();
-    } else if (numInputElements = string(numInputElements)) {
-        alert("That is not a number!");
-        removeElement();
     }
     }
 }
@@ -142,6 +139,8 @@ function removeEvenElements() {
     }
 }
 
+
+
 function addListeners() {
     const addButton = document.getElementById("addButton");
     addButton.addEventListener("click", addElement);
@@ -161,6 +160,6 @@ function addListeners() {
 
 function main() {
     addListeners();
-}
+};
 
 document.addEventListener('DOMContentLoaded', main);
